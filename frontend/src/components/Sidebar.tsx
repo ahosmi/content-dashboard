@@ -74,7 +74,7 @@ export function Sidebar() {
                     'w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all duration-200',
                     isActive
                       ? 'bg-purple-50 text-purple-700 border border-purple-200'
-                      : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
+                      : 'text-purple-200 hover:text-gray-900 hover:bg-gray-50'
                   )}
                 >
                   <Icon className={cn('w-4 h-4', isActive ? 'text-purple-600' : 'text-gray-400')} />
@@ -89,7 +89,7 @@ export function Sidebar() {
       <div className="p-4 border-t border-gray-200">
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button variant="ghost" className="w-full justify-start p-2 h-auto">
+            <Button variant="ghost" className="w-full justify-start p-2 h-auto group">
               <div className="flex items-center gap-3">
                 <div className="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center">
                   <span className="text-sm font-medium text-gray-600">
@@ -97,7 +97,7 @@ export function Sidebar() {
                   </span>
                 </div>
                 <div className="text-left">
-                  <p className="text-sm font-medium text-gray-900">
+                  <p className="text-sm font-medium text-white group-hover:text-black transition-colors">
                     {user?.name || 'User'}
                   </p>
                   <p className="text-xs text-gray-500">Creator</p>
